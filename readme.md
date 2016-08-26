@@ -18,3 +18,7 @@ If you use this work, please refer it as follows:
 	address = {NY, USA}
 }
 ```
+
+Python dependencies:
+  - `numpy`: library for numerical computations
+  - `seaborn`: plotting library
