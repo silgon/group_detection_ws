@@ -3,8 +3,11 @@
 This file emulates some kinds of F Formations.
 """
 import numpy as np
+DEFAULT_CENTER = (0., 0., 0.)
+DEFAULT_RADIUS = 0.6
+DEFAULT_SIGMA = (0.1, 0.1, 0.1)
 
-def Lshape(center=(0., 0., 0.), radius=.6, sigma=(0.2, 0.2, 0.1)):
+def Lshape(center=DEFAULT_CENTER, radius=DEFAULT_RADIUS, sigma=DEFAULT_SIGMA):
     """ create F Formation of the type L
     Arguments:
     - `poses`: the pose where the new humans will be created
@@ -26,7 +29,7 @@ def Lshape(center=(0., 0., 0.), radius=.6, sigma=(0.2, 0.2, 0.1)):
     return poses
 
 
-def visAvis(center=(0., 0., 0.), radius=.6, sigma=(0.2, 0.2, 0.1)):
+def visAvis(center=DEFAULT_CENTER, radius=DEFAULT_RADIUS, sigma=DEFAULT_SIGMA):
     """ create F Formation of the type vis-A-vis
     Arguments:
     - `poses`: the pose where the new humans will be created
@@ -38,7 +41,7 @@ def visAvis(center=(0., 0., 0.), radius=.6, sigma=(0.2, 0.2, 0.1)):
     
     return circleFormation(2, center, radius, sigma)
 
-def Vshape(center=(0., 0., 0.), radius=.6, sigma=(0.2, 0.2, 0.1)):
+def Vshape(center=DEFAULT_CENTER, radius=DEFAULT_RADIUS, sigma=DEFAULT_SIGMA):
     """ create F Formation of the type V
     Arguments:
     - `poses`: the pose where the new humans will be created
@@ -59,7 +62,7 @@ def Vshape(center=(0., 0., 0.), radius=.6, sigma=(0.2, 0.2, 0.1)):
                   theta-np.pi/4+sg_th])
     return poses
 
-def Cshape(center=(0., 0., 0.), radius=.6, sigma=(0.2, 0.2, 0.1)):
+def Cshape(center=DEFAULT_CENTER, radius=DEFAULT_RADIUS, sigma=DEFAULT_SIGMA):
     """ create F Formation of the type V
     Arguments:
     - `poses`: the pose where the new humans will be created
@@ -81,7 +84,7 @@ def Cshape(center=(0., 0., 0.), radius=.6, sigma=(0.2, 0.2, 0.1)):
     return poses
 
 
-def circleFormation(n=4, center=(0., 0., 0.), radius=.6, sigma=(0.2, 0.2, 0.1)):
+def circleFormation(n=4, center=DEFAULT_CENTER, radius=DEFAULT_RADIUS, sigma=DEFAULT_SIGMA):
     """ create F Formation of the type Circular with N people
     Arguments:
     - `n`: number of humans you want
@@ -104,7 +107,7 @@ def circleFormation(n=4, center=(0., 0., 0.), radius=.6, sigma=(0.2, 0.2, 0.1)):
     return poses
 
 
-def sideBySide(center=(0., 0., 0.), radius=.6, sigma=(0.2, 0.2, 0.1)):
+def sideBySide(center=DEFAULT_CENTER, radius=DEFAULT_RADIUS, sigma=DEFAULT_SIGMA):
     """ create F Formation of the type side-by-side
     In this case, the people are not looking to the center of
     the O-space (since they suppose to be walking)
