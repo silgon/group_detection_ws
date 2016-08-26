@@ -6,7 +6,6 @@ import seaborn as sns
 plt = sns.plt
 from matplotlib.patches import Circle, Ellipse
 
-
 def solve(poses, sigma=(.6,.6), plot=True, plot_offset=3., resolution=0.1,
           local_footprint=1., radius=0.6):
     poses = np.array(poses)
@@ -37,7 +36,6 @@ def solve(poses, sigma=(.6,.6), plot=True, plot_offset=3., resolution=0.1,
         plt.contour(X, Y, cost, cmap="viridis")
         plt.colorbar()
         plt.scatter(groups_center[:,0], groups_center[:,1], marker='o')
-        plt.show()
     return groups, groups_center
 
 
